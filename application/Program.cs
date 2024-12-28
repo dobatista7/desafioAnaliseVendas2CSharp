@@ -34,6 +34,13 @@ namespace DesafioAnaliseVendas2CSharp.application
                 .OrderBy(result => result.Seller) // Ordena os resultados por nome do vendedor
                 .ToList();
 
+            Console.WriteLine("Total de vendas por vendedor:");
+            // Exibe os resultados
+            foreach (var entry in totalSalesBySeller)
+            {
+                Console.WriteLine($"{entry.Seller} - R$ {entry.Total:F2}");
+            }
+
         }
     }
 }
